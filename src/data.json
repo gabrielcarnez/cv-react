@@ -1,10 +1,10 @@
 {
 	"about": {
-		"name": "gabriel",
+		"name": "Gabriel",
 		"surname": "Carnez",
 		"address": "LA PLATA, BUENOS AIRES, ARGENTINA · CO 1900",
 		"email": "GABRIEL.CARNEZ@GMAIL.COM",
-		"description": "I'm in the software develop from 7 years, and I was worked with many technologies, some oldies and another more new, I like learn so that is ot a problem to me. I work mainly with web technologies, like PHP (with Codeigniter), Bootstrap, Jquery and React, but also I try with others like Vue Js, Node and some JS framework.",
+		"description": "I'm in the software develop from 7 years, and I was worked with many technologies, some oldies and another more new, I like learn so that is not a problem to me. I work mainly with web technologies, like PHP (with Codeigniter), Bootstrap, Jquery and React, but also I try with others like Vue Js, Node and some JS framework.",
 		"socials": {
 			"linkedin": "https://www.linkedin.com/in/gabriel-david-carnez/",
 			"facebook": "https://www.facebook.com/gabriel.carnez/"

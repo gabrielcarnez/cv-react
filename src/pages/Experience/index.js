@@ -14,7 +14,9 @@ const Experience = (props) => {
 	);
 };
 
-Experience.propTypes = {};
+Experience.propTypes = {
+	institute: PropTypes.arrayOf(PropTypes.string),
+};
 
 Experience.defaultProps = {};
 

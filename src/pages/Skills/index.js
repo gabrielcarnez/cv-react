@@ -8,17 +8,19 @@ const Skills = (props) => {
 	const { data } = props;
 	const { icons, list } = data;
 	return (
-		<div class="resume-section-content">
-			<h2 class="mb-5">Skills</h2>
-			<div class="subheading mb-3">Programming Languages & Tools</div>
+		<div className="resume-section-content">
+			<h2 className="mb-5">Skills</h2>
+			<div className="subheading mb-3">Programming Languages & Tools</div>
 			<SkillsIcons icons={icons} />
-			<div class="subheading mb-3">Workflow</div>
+			<div className="subheading mb-3">Workflow</div>
 			<SkillsList list={list} />
 		</div>
 	);
 };
 
-Skills.propTypes = {};
+Skills.propTypes = {
+	institute: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)),
+};
 
 Skills.defaultProps = {};
 

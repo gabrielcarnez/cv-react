@@ -1,0 +1,37 @@
+[
+  {
+    "text": "about",
+    "url": "/",
+    "type": "page"
+  },
+  {
+    "text": "experience",
+    "url": "/experience",
+    "type": "page"
+  },
+  {
+    "text": "education",
+    "url": "/education",
+    "type": "page"
+  },
+  {
+    "text": "skills",
+    "url": "/skills",
+    "type": "page"
+  },
+  {
+    "text": "download cv",
+    "url": "cv.pdf",
+    "type": "download"
+  },
+  {
+    "text": "show code",
+    "url": "https://github.com/gabrielcarnez/cv-react",
+    "type": "link"
+  },
+  {
+    "text": "vue version",
+    "url": "http://gabrielcarnez.com.ar/",
+    "type": "link"
+  }
+]

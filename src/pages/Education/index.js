@@ -14,7 +14,9 @@ const Education = (props) => {
 	);
 };
 
-Education.propTypes = {};
+Education.propTypes = {
+	institute: PropTypes.arrayOf(PropTypes.string),
+};
 
 Education.defaultProps = {};
 

@@ -7,15 +7,15 @@ const About = (props) => {
   const { data } = props;
   const { name, surname, address, email, description, socials } = data;
   return (
-    <div class="resume-section-content">
-      <h1 class="mb-0">
+    <div className="resume-section-content">
+      <h1 className="mb-0">
         {name}
-        <span class="text-primary">{surname}</span>
+        <span className="text-primary"> {surname}</span>
       </h1>
-      <div class="subheading mb-5">
+      <div className="subheading mb-5">
         {address} · <a href="mailto:{email}">{email}</a>
       </div>
-      <p class="lead mb-5">{description}</p>
+      <p className="lead mb-5">{description}</p>
       <SocialIcons {...socials} />
     </div>
   );

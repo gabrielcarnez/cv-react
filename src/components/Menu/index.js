@@ -1,86 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import img from "../../assets/photo.jpeg";
 import "./Menu.css";
+import UserAvatar from "../UserAvatar";
 
-const Menu = () => (
-	<nav
-		class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
-		id="sideNav"
-	>
-		<a class="navbar-brand js-scroll-trigger" href="#page-top">
-			<span class="d-block d-lg-none">Clarence Taylor</span>
-			<span class="d-none d-lg-block">
-				<img
-					class="img-fluid img-profile rounded-circle mx-auto mb-2"
-					src={img}
-					alt=""
-				/>
-			</span>
-		</a>
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent"
-			aria-expanded="false"
-			aria-label="Toggle navigation"
+function router(op, index) {
+	return (
+		<li key={`menu-${index}`} className="nav-item">
+			<Link className="nav-link js-scroll-trigger" to={op.url}>
+				{op.text}
+			</Link>
+		</li>
+	);
+}
+
+function pdf(op, index) {
+	return (
+		<li key={`menu-${index}`} className="nav-item">
+			<a
+				className="nav-link js-scroll-trigger"
+				href={op.url}
+				download="cv"
+				target="_blank"
+			>
+				{op.text}
+			</a>
+		</li>
+	);
+}
+
+function link(op, index) {
+	return (
+		<li key={`menu-${index}`} className="nav-item">
+			<a
+				className="nav-link js-scroll-trigger"
+				href={op.url}
+				target="_blank"
+			>
+				{op.text}
+			</a>
+		</li>
+	);
+}
+
+const Menu = (props) => {
+	const [menuActive, setMenuState] = useState(false);
+	const { data, menu } = props;
+	const { name, surname } = data;
+
+	const handleClick = (e) => {
+		e.preventDefault();
+		setMenuState(!menuActive);
+	};
+
+	return (
+		<nav
+			className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+			id="sideNav"
 		>
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<Link class="nav-link js-scroll-trigger" to="/">
-						About
-					</Link>
-				</li>
-				<li class="nav-item">
-					<Link class="nav-link js-scroll-trigger" to="/experience">
-						experience
-					</Link>
-				</li>
-				<li class="nav-item">
-					<Link class="nav-link js-scroll-trigger" to="/education">
-						education
-					</Link>
-				</li>
-				<li class="nav-item">
-					<Link class="nav-link js-scroll-trigger" to="/skills">
-						skills
-					</Link>
-				</li>
-				<li class="nav-item">
-					<a
-						class="nav-link js-scroll-trigger"
-						href="cv.pdf"
-						download="cv"
-						target="_blank"
-					>
-						download Cv
-					</a>
-				</li>
-				<li class="nav-item">
-					<a
-						class="nav-link js-scroll-trigger"
-						href="https://github.com/gabrielcarnez/cv-react"
-						target="_blank"
-					>
-						Show code
-					</a>
-				</li>
-				<li><small>In progress</small></li>
-				{/*<li class="nav-item">
-								<Link class="nav-link js-scroll-trigger" to="/contact">
-									contact
-								</Link>
-							</li>*/}
-			</ul>
-		</div>
-	</nav>
-);
+			<UserAvatar fullName={`${name} ${surname}`} />
+			<button
+				onClick={handleClick}
+				className="navbar-toggler"
+				type="button"
+			>
+				<span className="navbar-toggler-icon"></span>
+			</button>
+			<div
+				className={`collapse navbar-collapse ${
+					menuActive ? "show" : ""
+				}`}
+				id="navbarSupportedContent"
+			>
+				<ul className="navbar-nav">
+					{menu.map((op, index) => {
+						switch (op.type) {
+							case "page":
+								return router(op, index);
+								break;
+							case "download":
+								return pdf(op, index);
+								break;
+							case "link":
+								return link(op, index);
+								break;
+						}
+					})}
+				</ul>
+			</div>
+		</nav>
+	);
+};
 
 Menu.propTypes = {};
 
