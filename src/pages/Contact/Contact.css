@@ -1,1 +1,31 @@
 .Contact {}
+
+button {
+	font-weight: bold;
+	color: white;
+	background-color: #001ca6 ;
+	border: 0px;
+	padding: 10px;
+	height: 60px;
+	width: 100%;
+}
+
+button:first-letter {
+	text-transform: uppercase;
+}
+
+button:hover {
+	background-color: #03187b;
+}
+
+@media (max-width: 400px) {
+	button {
+		font-weight: bold;
+		color: white;
+		background-color: #001ca6;
+		border: 0px;
+		padding: 10px;
+		height: 60px;
+		width: 100%;
+	}
+}

@@ -7,6 +7,7 @@ const Education = (props) => {
 	const { data } = props;
 	return (
 		<div className="Education">
+			<h2 className="mb-5">EDUCATION</h2>
 			{data.map((e, index) => (
 				<EducationCard key={`key-${index}`} {...e} />
 			))}

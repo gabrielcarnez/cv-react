@@ -7,7 +7,8 @@ const Experience = (props) => {
 	const { data } = props;
 	return (
 		<div className="Experience">
-			{data.map((e,index) => (
+			<h2 className="mb-5">Experience</h2>
+			{data.map((e, index) => (
 				<ExperienceCard key={`key-${index}`} {...e} />
 			))}
 		</div>

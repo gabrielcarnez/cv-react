@@ -35,9 +35,9 @@ function App() {
               <Route exact path="/skills">
                 <Skills data={skills} />
               </Route>
-              {/*<Route exact path="/contact">
-                              <Contact />
-                            </Route>*/}
+              <Route exact path="/contact">
+                <Contact />
+              </Route>
             </Switch>
           </section>
         </div>

@@ -1,0 +1,24 @@
+.InputForm {
+}
+
+input {
+	width: 100%;
+}
+
+textarea {
+		width: 100%;
+	}
+
+label:first-letter {
+	text-transform: uppercase;
+}
+
+@media (max-width: 400px) {
+	input {
+		width: 100%;
+	}
+
+	textarea {
+		width: 100%;
+	}
+}

@@ -25,6 +25,11 @@
     "type": "download"
   },
   {
+    "text": "contact",
+    "url": "/contact",
+    "type": "page"
+  },
+  {
     "text": "show code",
     "url": "https://github.com/gabrielcarnez/cv-react",
     "type": "link"
