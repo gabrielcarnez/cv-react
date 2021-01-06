@@ -1,0 +1,77 @@
+{
+	"about": {
+		"name": "gabriel",
+		"surname": "Carnez",
+		"address": "LA PLATA, BUENOS AIRES, ARGENTINA · CO 1900",
+		"email": "GABRIEL.CARNEZ@GMAIL.COM",
+		"description": "I'm in the software develop from 7 years, and I was worked with many technologies, some oldies and another more new, I like learn so that is ot a problem to me. I work mainly with web technologies, like PHP (with Codeigniter), Bootstrap, Jquery and React, but also I try with others like Vue Js, Node and some JS framework.",
+		"socials": {
+			"linkedin": "https://www.linkedin.com/in/gabriel-david-carnez/",
+			"facebook": "https://www.facebook.com/gabriel.carnez/"
+		}
+	},
+	"experience": [
+		{
+			"company": "FABA",
+			"position": "FULL STACK DEVELOPER",
+			"description": "Full Stack developer with classic asp and asp .net, Bootstrap and Jquery. Mobile developer with JS, PhoneGap.",
+			"date": "Jar 2019 - Present"
+		},
+		{
+			"company": "FREELANCE",
+			"position": "FULL STACK DEVELOPER",
+			"description": "Full Stack developer with PHP, Codeigniter, Bootstrap, Jquery and React. Mobile developer with JS, PhoneGap and F7.",
+			"date": "May 2014 - Present"
+		},
+		{
+			"company": "ARZION",
+			"position": "FULL STACK DEVELOPER - FRONTEND DEVELOPER",
+			"description": "First months full stack developer with PHP Codeigniter and Jquery. React developer until 2018.",
+			"date": "Mar 2016 - Dec 2018"
+		},
+		{
+			"company": "SUONPER",
+			"position": "FULL STACK DEVELOPER",
+			"description": "Full Stack developer with PHP and Jquery. Mobile developer with JS, PhoneGap.",
+			"date": "Mar 2013 - Mar 2016"
+		}
+	],
+	"education": [
+		{
+			"institute": "UTN - FRLP",
+
+			"carrer": "INFORMATION SYSTEMS ENGINEER",
+			"date": "May 2009 - 2020"
+		},
+		{
+			"institute": "CFP 40",
+			"carrer": "DESKTOP APP AND WEB WITH JAVA",
+			"date": "Mar 2015 - Dec 2015"
+		},
+		{
+			"institute": "CFP 402",
+			"carrer": "VB COURSE",
+			"date": "Mar 2014 - Dec 2014"
+		}
+	],
+	"skills": {
+		"icons": [
+			"css3-alt",
+			"html5",
+			"js",
+			"react",
+			"node-js",
+			"vuejs",
+			"php",
+			"git",
+			"bootstrap"
+		],
+		"list": [
+			"Responsive Design",
+			"Unit Testing",
+			"Mobile developer",
+			"Cross Functional Teams",
+			"Agile Development & Scrum"
+		]
+	}
+}
