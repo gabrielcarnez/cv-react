@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./SkillsList.css";
 
 const SkillsList = (props) => {
@@ -17,9 +16,5 @@ const SkillsList = (props) => {
 		</ul>
 	);
 };
-
-SkillsList.propTypes = {};
-
-SkillsList.defaultProps = {};
 
 export default SkillsList;

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import "./Contact.css";
-import InputForm from "../../components/InputForm";
-import Loading from "../../components/Loading";
-import SuccessMessage from "../../components/SuccessMessage";
-import ErrorMessage from "../../components/ErrorMessage";
+import InputForm from "components/InputForm";
+import Loading from "components/Loading";
+import SuccessMessage from "components/SuccessMessage";
+import ErrorMessage from "components/ErrorMessage";
 import axios from "axios";
 
 const validate = (values) => {
@@ -17,7 +16,7 @@ const validate = (values) => {
 	}
 	return {
 		error: error,
-		valid: error.length == 0,
+		valid: error.length === 0,
 	};
 };
 
@@ -101,7 +100,7 @@ const Contact = () => {
 					>GABRIEL.CARNEZ@GMAIL.COM - tel:+54 221-6138052</a>
 			</div>
 			{state.error.length !== 0 && <ErrorMessage error={state.error} />}
-			{state.success && state.error.length == 0 && <SuccessMessage />}
+			{state.success && state.error.length === 0 && <SuccessMessage />}
 			{!state.success && (
 				<div className="lead mb-5">
 					<InputForm
@@ -142,9 +141,5 @@ const Contact = () => {
 		</div>
 	);
 };
-
-Contact.propTypes = {};
-
-Contact.defaultProps = {};
 
 export default Contact;

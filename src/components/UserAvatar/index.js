@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./UserAvatar.css";
-import img from "../../assets/photo.jpeg";
+import img from "assets/photo.jpeg";
 
 const UserAvatar = (props) => {
 	const { fullName } = props;

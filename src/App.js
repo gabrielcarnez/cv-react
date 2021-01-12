@@ -1,42 +1,53 @@
-import Menu from "./components/Menu/";
+import Menu from "components/Menu/";
+import { useState, useEffect } from "react";
+import Axios from "axios";
 //pages
-import About from "./pages/About";
-import Experience from "./pages/Experience";
-import Education from "./pages/Education";
-import Skills from "./pages/Skills";
-import Contact from "./pages/Contact";
+import About from "pages/About";
+import Experience from "pages/Experience";
+import Education from "pages/Education";
+import Skills from "pages/Skills";
+import Contact from "pages/Contact";
 
-//data
-import data from "./data.json";
-import menu from "./menu.json";
+import menu from "menu.json";
 
 //router
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const { about, experience, education, skills } = data;
+  const [data, setdata] = useState(null);
+
+  useEffect(() => {
+    async function getData() {
+      const text = await Axios.get("./data.json");
+      const { data } = text;
+      setdata(data);
+    }
+    getData();
+  }, []);
+
+  const { about, experience, education, skills } = data || {};
 
   return (
     <Router basename={"/react-cv"}>
       <div className="App">
-        <Menu data={about} menu={menu} />
+        {data && <Menu data={about} menu={menu} />}
         <div className="container-fluid p-0">
           <section className="resume-section" id="about">
             <Switch>
               <Route exact path="/">
-                <About data={about} />
+                {data && <About data={about} />}
               </Route>
               <Route exact path="/experience">
-                <Experience data={experience} />
+                {data && <Experience data={experience} />}
               </Route>
               <Route exact path="/education">
-                <Education data={education} />
+                {data && <Education data={education} />}
               </Route>
               <Route exact path="/skills">
-                <Skills data={skills} />
+                {data && <Skills data={skills} />}
               </Route>
               <Route exact path="/contact">
-                <Contact />
+                {data && <Contact />}
               </Route>
             </Switch>
           </section>

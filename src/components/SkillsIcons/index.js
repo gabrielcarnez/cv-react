@@ -15,7 +15,9 @@ const SkillsIcons = (props) => {
 	);
 };
 
-SkillsIcons.propTypes = {};
+SkillsIcons.propTypes = {
+	props: PropTypes.array
+};
 
 SkillsIcons.defaultProps = {};
 

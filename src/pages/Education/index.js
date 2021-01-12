@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Education.css";
-import EducationCard from "../../components/EducationCard/";
+import EducationCard from "components/EducationCard/";
 
 const Education = (props) => {
 	const { data } = props;

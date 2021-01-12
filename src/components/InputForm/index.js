@@ -8,10 +8,10 @@ const InputForm = (props) => {
 		<div>
 			<label>{label}</label>
 			<br />
-			{type == "textarea" && (
+			{type === "textarea" && (
 				<textarea onChange={onChange} name={name} value={value}/>
 			)}
-			{type == "text" && (
+			{type === "text" && (
 				<input
 					onChange={onChange}
 					type={type}

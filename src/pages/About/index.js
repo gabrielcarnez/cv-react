@@ -1,10 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./About.css";
-import SocialIcons from "../../components/SocialIcons/";
+import SocialIcons from "components/SocialIcons/";
 
-const About = (props) => {
-  const { data } = props;
+const About = ({ data }) => {
   const { name, surname, address, email, description, socials } = data;
   return (
     <div className="resume-section-content">
@@ -20,9 +18,5 @@ const About = (props) => {
     </div>
   );
 };
-
-About.propTypes = {};
-
-About.defaultProps = {};
 
 export default About;

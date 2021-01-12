@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./Menu.css";
-import UserAvatar from "../UserAvatar";
+import UserAvatar from "components/UserAvatar";
 
 function router(op, index) {
 	return (
@@ -21,6 +21,7 @@ function pdf(op, index) {
 				className="nav-link js-scroll-trigger"
 				href={op.url}
 				download="cv"
+				rel="noreferrer"
 				target="_blank"
 			>
 				{op.text}
@@ -92,7 +93,10 @@ const Menu = (props) => {
 	);
 };
 
-Menu.propTypes = {};
+Menu.propTypes = {
+	data: PropTypes.object, 
+	menu: PropTypes.array
+};
 
 Menu.defaultProps = {};
 

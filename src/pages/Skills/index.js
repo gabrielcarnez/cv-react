@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Skills.css";
-import SkillsIcons from "../../components/SkillsIcons/";
-import SkillsList from "../../components/SkillsList/";
+import SkillsIcons from "components/SkillsIcons/";
+import SkillsList from "components/SkillsList/";
 
 const Skills = (props) => {
 	const { data } = props;

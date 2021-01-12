@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Loading.css";
 
 const Loading = () => (
@@ -11,9 +10,5 @@ const Loading = () => (
 		<div class="rect5"></div>
 	</div>
 );
-
-Loading.propTypes = {};
-
-Loading.defaultProps = {};
 
 export default Loading;
